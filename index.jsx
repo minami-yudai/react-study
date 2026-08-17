@@ -10,9 +10,9 @@ function App() {
   return (
     <div>
       <div id="header">
-        <div id="h-hamburger"><img id="h-hamburgerimage" src="images/menu.png" /></div>
+        <div id="h-hamburger"><img id="h-hamburgerimage" src="public/menu.png" /></div>
         <div id="h-closer">×</div>
-        <a><img src="images/Logo_Kyoto_Uni.png" className="hover"  id="h-logo" /></a>
+        <a><img src="public/Logo_Kyoto_Uni.png" className="hover"  id="h-logo" /></a>
         <div className="h-menubox">
             <div className="h-menucontainer">
                 <div className="h-menu" id="h-menu">
@@ -26,16 +26,16 @@ function App() {
       <div id="main">
         <div className="p-container">{/*写真スライドショー*/}
           <div id="picturebox">
-              <div><img id="picL" src="images/topimage1.gif"/></div>
-              <div><img id="picR" src="images/topimage3.gif"/></div>
-              <div><img id="picC" src="images/topimage2.gif"/></div>
+              <div><img id="picL" src="public/topimage1.gif"/></div>
+              <div><img id="picR" src="public/topimage3.gif"/></div>
+              <div><img id="picC" src="public/topimage2.gif"/></div>
           </div>
           <div className="p-fadeleft p-fade"></div>
           <div className="p-faderight p-fade"></div>
         </div>
         <div className="a-container">{/*アドミッションポリシー*/}
             <div className="titlebox">
-                <img src="images/book_icon.svg" className="icon"/>
+                <img src="public/book_icon.svg" className="icon"/>
                 <h1 className="title">学部アドミッションポリシー</h1>
             </div>
             <div className="a-menubox">
@@ -46,12 +46,12 @@ function App() {
         </div>
         <div className="w-container">{/*Webパンフレット*/}
             <div className="titlebox">
-                <img src="images/pamphlet_icon.svg" className="icon"/>
+                <img src="public/pamphlet_icon.svg" className="icon"/>
                 <h1 className="title">Web Pamphlet</h1>
             </div>
             <div className="w-pamphlet">
                 <a href="https://daigakujc.jp/wp/agreement_tmpl.html" id="underline">（ご利用方法について）</a>
-                <a href="https://web-pamphlet.jp/kyoto-u/p/" id="pamphlet-a"><img src="images/KU_pamphlet.jpg" className="hover"  id="pamphlet-img"/></a>
+                <a href="https://web-pamphlet.jp/kyoto-u/p/" id="pamphlet-a"><img src="public/KU_pamphlet.jpg" className="hover"  id="pamphlet-img"/></a>
                 <span id="pamphlet-title">大学案内</span>
             </div>
             <div className="w-links">

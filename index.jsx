@@ -1,5 +1,11 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
+import { Hmenu } from "./components";
+import { Amenu } from "./components";
+
+const headers = ["大学の基本理念", "学部アドミッションポリシー", "学費", "交通アクセス", "お問い合わせ", "Web Pamphletを見る", "資料請求", "KyotoU Channel"];
+const faculties = ["総合人間", "文", "教育", "法", "経済", "理", "医", "薬", "工", "農"];
+const colors = ["174198", "0075c2", "0091db", "27bbe9", "6cc6d2", "6ec2aa", "6dbd72", "b8d200", "f0e900", "f5a200"]
 function App() {
   return (
     <div>
@@ -10,20 +16,15 @@ function App() {
         <div className="h-menubox">
             <div className="h-menucontainer">
                 <div className="h-menu" id="h-menu">
-                    <a><div className="hover" id="h-m1">大学の基本理念</div></a>
-                    <a><div className="hover" id="h-m2">学部アドミッションポリシー</div></a>
-                    <a><div className="hover" id="h-m3">学費</div></a>
-                    <a><div className="hover" id="h-m4">交通アクセス</div></a>
-                    <a><div className="hover" id="h-m5">お問い合わせ</div></a>
-                    <a><div className="hover" id="h-m6">Web Pamphletを見る</div></a>
-                    <a><div className="hover" id="h-m7">資料請求</div></a>
-                    <a><div className="hover" id="h-m8">KyotoU Channel</div></a>
+                    {headers.map((header, index) => (
+                      <Hmenu key = {index} number={index + 1} value ={header}/>
+                    ))}
                 </div>
             </div>
         </div>
       </div>
       <div id="main">
-        <div className="p-container">{/*!--写真スライドショー*/}
+        <div className="p-container">{/*写真スライドショー*/}
           <div id="picturebox">
               <div><img id="picL" src="images/topimage1.gif"/></div>
               <div><img id="picR" src="images/topimage3.gif"/></div>
@@ -32,22 +33,15 @@ function App() {
           <div className="p-fadeleft p-fade"></div>
           <div className="p-faderight p-fade"></div>
         </div>
-        <div className="a-container">
+        <div className="a-container">{/*アドミッションポリシー*/}
             <div className="titlebox">
                 <img src="images/book_icon.svg" className="icon"/>
                 <h1 className="title">学部アドミッションポリシー</h1>
             </div>
-            <div className="a-menubox">{/*ここreactで書きたいな*/}
-                <a><div className="hover" id="a-m1" >総合人間学部</div></a>
-                <a><div className="hover" id="a-m2" >文学部</div></a>
-                <a><div className="hover" id="a-m3">教育学部</div></a>
-                <a><div className="hover" id="a-m4">法学部</div></a>
-                <a><div className="hover" id="a-m5">経済学部</div></a>
-                <a><div className="hover" id="a-m6">理学部</div></a>
-                <a><div className="hover" id="a-m7">医学部</div></a>
-                <a><div className="hover" id="a-m8">薬学部</div></a>
-                <a><div className="hover" id="a-m9">工学部</div></a>
-                <a><div className="hover" id="a-m10">農学部</div></a>
+            <div className="a-menubox">
+                {faculties.map((faculty, index)=> (
+                  <Amenu key = {index} number={index + 1} value={faculty} color={colors[index]} />
+                ))}
             </div>
         </div>
         <div className="w-container">{/*Webパンフレット*/}
